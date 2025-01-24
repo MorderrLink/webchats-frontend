@@ -14,7 +14,7 @@ export function useWebRTC(userId: string, peerId: string) {
   // if (userId == "undefined" || peerId == "undefined" || userId == "null" || peerId == "null") return;
 
   useEffect(() => {
-    const domain = window.location.hostname;
+    const domain = process.env.BACKEND_ENDPOINT
     const ws = new WebSocket(`ws://${domain}:5000`);
     setSocket(ws);
 

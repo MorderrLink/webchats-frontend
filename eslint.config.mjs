@@ -14,6 +14,7 @@ const eslintConfig = [
   compat.config({
     rules: {
       '@typescript-eslint/no-unused-vars': "off",
+      '@typescript-eslint/no-non-null-asserted-optional-chain':"off",
       'react-hooks/rules-of-hooks': "off",
       'react-hooks/exhaustive-deps': "off"
 

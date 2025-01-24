@@ -14,7 +14,7 @@ const useFetchUser = (userId: string | undefined | null) => {
       setError(null);
 
       try {
-        const response = await fetch('http://localhost:8000/api/get-user', {
+        const response = await fetch(`https://${process.env.BACKEND_ENDPOINT}/api/get-user`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
