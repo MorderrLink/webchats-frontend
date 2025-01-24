@@ -27,7 +27,7 @@ export default function SearchingDialog() {
         return () => clearTimeout(handler); 
     }, [inputValue]);
 
-    const { results, loadingResults, errorResults } = useSearch(debouncedValue.trim());
+    const { results } = useSearch(debouncedValue.trim());
     const handleOpenChange = (open: boolean) => {
         setIsOpen(open);
         if (!open) {

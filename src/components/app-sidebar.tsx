@@ -19,7 +19,7 @@ import SearchingDialog from "./SearchingDialog";
 
 export function AppSidebar() {
   const { userId } = useAuth();
-  const { user: user, loading, error } = useFetchUserWithChats(userId);
+  const { user: user } = useFetchUserWithChats(userId);
    
   // console.log("[App-Sidebar]::", user?.name, user);
   return (

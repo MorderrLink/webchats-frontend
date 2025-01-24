@@ -1,14 +1,11 @@
 'use client';
-
-import useFetchUser from '@/hooks/use-fetch-user';
 import { SignOutButton, useAuth } from '@clerk/nextjs';
 
 
 
 const Home = () => {
 
-  const { isSignedIn, userId, getToken } = useAuth();
-  const { user, loading, error } = useFetchUser(userId); 
+  const { userId } = useAuth();
   
   return (
     <div>
