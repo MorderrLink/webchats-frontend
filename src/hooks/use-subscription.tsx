@@ -31,7 +31,7 @@ export const UseSubscription = () => {
             userId: user?.id 
           };
           
-          await fetch(`https://${process.env.BACKEND_ENDPOINT}/api/save-subscription`, {
+          await fetch(`https://${process.env.BACKEND_ENDPOINT!}/api/save-subscription`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(subscriptionData),
