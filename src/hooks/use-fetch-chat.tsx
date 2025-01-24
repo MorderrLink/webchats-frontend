@@ -16,7 +16,7 @@ const useFetchChat = (chatId: string | string[] | undefined) => {
       try {
         console.log('Sending chatId:', chatId);
 
-        const response = await fetch(`https://${process.env.BACKEND_ENDPOINT}/api/get-chat-by-id`, {
+        const response = await fetch(`https://${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}/api/get-chat-by-id`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ const useFetchUserWithChats = (userId: string | undefined | null) => {
       setError(null);
 
       try {
-        const response = await fetch(`https://${process.env.BACKEND_ENDPOINT}/api/get-user-with-chats`, {
+        const response = await fetch(`https://${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}/api/get-user-with-chats`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

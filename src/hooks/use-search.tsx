@@ -14,7 +14,7 @@ const useSearch = (searchInput: string) => {
       setError(null);
 
       try {
-        const response = await fetch(`https://${process.env.BACKEND_ENDPOINT}/api/search-users`, {
+        const response = await fetch(`https://${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}/api/search-users`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
