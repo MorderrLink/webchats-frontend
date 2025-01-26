@@ -15,7 +15,7 @@ export function useWebRTC(userId: string, peerId: string) {
 
   useEffect(() => {
     const domain = process.env.NEXT_PUBLIC_BACKEND_ENDPOINT
-    const ws = new WebSocket(`ws://${domain}`);
+    const ws = new WebSocket(`wss://${domain}`);
     setSocket(ws);
 
     ws.onopen = () => {
